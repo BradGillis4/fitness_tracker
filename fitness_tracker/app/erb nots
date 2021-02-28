@@ -1,0 +1,3 @@
+Edit.erb under action/method -way to send different requests, replaces post with patch request
+
+show.erb holds delete action 

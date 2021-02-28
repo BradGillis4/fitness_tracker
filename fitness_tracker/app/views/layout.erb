@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <title>FitnessTracker</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+   <header>
+  <a href ="/signup">SignUp</a>
+<a href ="/login">Login</a>
+<a href = "/posts/new">New Post</a>
+
+<a href ="/posts">All Posts</a>
+<a href = "/logout">Logout</a>
+  </header>
+  
+  
+  
+  <body>
+
+
+        <% flash.keys.each do |type| %>
+            <div data-alert class="flash <%= type %> alert-box radius">
+                <%= flash[type] %>
+            </div>
+        <% end %>
+  
+    <div class="wrapper">
+      
+        <%= yield %>
+
+      <footer class="branding">
+        <small>&copy; 2021 <strong>FitnessTracker</strong></small>
+      </footer>
+    </div>
+
+  </body>
+</html>

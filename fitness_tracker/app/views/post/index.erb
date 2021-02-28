@@ -1,0 +1,10 @@
+<h1>INDEX</h1>
+
+
+<% @posts.each do |p| %>
+    <p><%= p.name %> - <%= p.id %> 
+        <% if current_user == p.user %>
+            <a href="/posts/<%= p.id %>/edit">Edit</a> 
+        <% end %>
+    </p>
+<% end %>
